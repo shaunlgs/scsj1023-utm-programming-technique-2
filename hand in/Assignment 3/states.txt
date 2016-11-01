@@ -1,0 +1,14 @@
+01	Wilayah Persekutuan
+02	Perak
+03	Selangor
+04	Melaka
+05	Negeri Sembilan
+06	Johor
+07	Pahang
+08	Trengganu
+09	Kelantan
+10	Pulau pinang
+11	Kedah
+12	Sarawak
+13	Sabah
+14	Wilayah Persekutuan Labuan

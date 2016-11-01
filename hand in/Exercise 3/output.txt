@@ -1,0 +1,11 @@
+Linoleum Size: 0.67 Feet x 0.83 Feet
+Linoleum Price: RM 1.50 per piece
+
+Room No.            Size(sqft)          Number of Linoleum (pieces)   Cost                
+1                   369.00              665                           997.50              
+2                   125.00              225                           337.50              
+3                   125.00              225                           337.50              
+4                   108.00              195                           292.50              
+
+Total Linoleum Required: 1310 Pieces
+Total Cost: RM 1965.00

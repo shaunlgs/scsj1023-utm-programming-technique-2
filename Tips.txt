@@ -1,0 +1,102 @@
+- Comment ada markah (atas program, dan dalam program)
+- Include preprocessor ada markah
+- Jika soalan kata guna variable ch, guna ch, jangan guna variable lain
+
+Structure pointer
+// i) Define an array of structure variable called lecturerTP2 (maximum size 10) with the initialized values as follows.
+    Lecturer *lecturerTP2;
+    lecturerTP2 = new Lecturer[3];
+
+    lecturerTP2[0] = {1234, {"Dayang Norhayati", "305-03", 32354}, "Software Engineering", "FC"};
+    lecturerTP2[1] = {5678, {"Norazah Yusof", "305-06", 32341}, "Software Engineering", "FC"};
+    lecturerTP2[2] = {9101, {"Haswadi Hasan", "438-08", 32374}, "Computer Science", "FC"};
+
+cannot do like above, because after structure is initialized (i.e. lecturerTP2 = new Lecturer[3];), cannot use bracket initialization. Can only use member-access syntax to fill in one by one. Refer http://stackoverflow.com/questions/6810656/creating-an-array-of-structs-in-c
+
+lecturerTP2[0].ID = 1234;
+lecturerTP2[0].contact.name = "Dayang Norhayati";
+...
+
+
+OR initialize the values at first.
+
+Lecturer lecturerTP2[3] = {{1234, {"Dayang Norhayati", "305-03", 32354}, "Software Engineering", "FC"}, {5678, {"Norazah Yusof", "305-06", 32341}, "Software Engineering", "FC"}, {9101, {"Haswadi Hasan", "438-08", 32374}, "Computer Science", "FC"}};
+
+iomanip fixed, setprecision(), round up/down
+
+#include <> to include library file
+#include "" to include own created library file
+
+difference between other type of arrays and char arrays, cout will print content of char arrays while print address for other type of arrays. recall that arrays are pointers
+http://stackoverflow.com/questions/501816/why-does-cout-print-char-arrays-differently-from-other-arrays
+cannot compare two char*. that is c-string. need use strcmp.
+
+don't write to dat file for string, if you want, convert to c-string using .c_str() first
+const in name_length or state_code must have 1 more space for null terminator
+
+seems common to use const size for declaration of array
+const int SIZE = 5;
+int array[SIZE];
+
+if file last line not empty, will not read
+
+program 5.23
+if function is 
+
+Student::Student(const char n[])
+{
+    strcpy(name,n);
+    maxSubject = DEFAULT_SIZE;
+}
+
+have to use strcpy(name, n); cannot name = n; because n is a const char*, cannot make name point to n.
+use c-string strcpy
+
+
+const char * Student::getSubject(int index) const
+{
+    return subjects[index];
+}
+
+function implementation of accessor have to put const also
+
+must allocate memory before using memory
+
+class LawnMower
+{
+    private:
+        string modelNumber = "ABD1234";
+        Blade mowerBlade;
+        Engine mowerEngine;
+        Wheel mowerWheel;
+    public:
+        LawnMower(Blade, Engine, Wheel);
+        void print();
+};
+
+Since blade, engine, wheel class constructor have 2 parameters at constructor, however, mowerBlade, mowerEngine, mowerWheel when created, uses the default constructor, so we create a default constructor for each class.
+
+<vector> to get number of elements of array - chapter 8.11
+#include <vector>
+.size()
+.push_back()
+.resize()
+
+Person(string name, int age, string address)
+{
+    this->name = name;
+    this->age = age;
+    this->address = address;
+}
+
+Lecturer(string name, int age, string address) : Person(name, age, address) // note the arguments passed to base class Person does not need to specify data type
+{
+}
+
+member initialization lists
+Lecturer(string name, int age, string address, string facultyName, string facultyCode)
+: Person(name, age, address), // pass arguments from constructor of derived class Lecturer to constructor of base class Person
+fac(facultyName, facultyCode) // invoke constructor of fac object of class Faculty
+{
+    lecturerCount++;
+}

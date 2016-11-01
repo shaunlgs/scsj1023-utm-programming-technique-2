@@ -1,0 +1,8 @@
+#plateNumber,model,dailyRate,hourlyRate  #This is the header of the input file describing each column,respectively and will be skipped. Fields are separated by commas
+WLF120,NAZA RIA 2.5,150,12
+JDB431,PROTON EXORA,160,15
+JES2368,TOYOTA AVANZA,160,15
+WLF2681,TOYOTA INNOVA,230,20
+BLM2966,TOYOTA INNOVA,230,20
+WTA3883,TOYOTA WISH,280,25
+WMV3392,NISSAN GRAND LIVINA,290,25
