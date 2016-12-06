@@ -138,6 +138,12 @@ int main()
 
       obs[i].Subject(Code,Name,CreditHour,GGredEarned,PointEarned);
      }
+ cout <<"--------------------------------------------------------------------------------" << endl;
+
+ cout << setw(14) << "Student's Name" << ": " << StudentName << endl;
+ cout << setw(14) << left << "Student's ID" << ": " << StudentMatricNo << endl << endl;
+
+ cout << setw(18) << left << "Subject's Code" << setw(21) << left << "Name" << setw(14) << left << "Credit Hour" << setw(8) << left << "Grade" << setw(15) << left << "Point Earned" << endl << endl;
 
  outData <<"--------------------------------------------------------------------------------" << endl;
 
@@ -148,9 +154,12 @@ int main()
 
  for(char i=0; i, i<Loop; i++)
  {
+    cout << setw(19) << left << obs[i].getCode() << setw(20) << left << obs[i].getSubjectName() << setw(5) << right << obs[i].getCreditHour() << setw(12) << right << obs[i].getGradeEarned() << setw(11) << right << setprecision(1) << fixed << obs[i].getPointEarned() << endl;
+
   outData << setw(19) << left << obs[i].getCode() << setw(20) << left << obs[i].getSubjectName() << setw(5) << right << obs[i].getCreditHour() << setw(12) << right << obs[i].getGradeEarned() << setw(11) << right << setprecision(1) << fixed << obs[i].getPointEarned() << endl;
  }
 
+ cout<< "CGPA : " << setprecision(2) << fixed <<cgpa;
  outData<< "CGPA : " << setprecision(2) << fixed <<cgpa;
 
 
