@@ -1,0 +1,23 @@
+AC3456
+MUHAMAD ALI BIN AHMAD
+5
+SCP1013
+Computer Programming
+3
+C
+SNP1014
+Network Programming
+4
+A
+SDP1014
+Database Programming
+4
+B
+SID2032
+Interface Design
+2
+B
+SSE3033
+Software Engineering
+3
+A
