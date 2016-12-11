@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fstream>
+
 using namespace std;
 
 class Subjects
@@ -18,7 +19,7 @@ class Subjects
 
 
  public:
-  //constructor
+
     void Subject(char a[], char b[], int c, char d, double e) {
         strcpy(Code, a);
         strcpy(Name, b);
@@ -27,14 +28,14 @@ class Subjects
         PointEarned= e;
     }
 
-  //mutator functions
+
   void   setCode(string);
   void   setSubjectName(string);
   void   setCreditHour(int);
   void   setGradeEarned(char);
   void   setSubjectPointValue(double);
 
-  //accessor functions
+
   char*    getCode(){return Code;}
   char* getSubjectName(){return Name;}
   int getCreditHour(){return CreditHour;}
@@ -122,8 +123,7 @@ int main()
       cin >> GGredEarned;
       cin.ignore();
 
-      cout << " Point Value => ";
-      cout << obj.getPoint(GGredEarned) << endl;
+
 
       PPointValue = atof(obj.getPoint(GGredEarned).c_str());
 
@@ -138,14 +138,15 @@ int main()
 
       obs[i].Subject(Code,Name,CreditHour,GGredEarned,PointEarned);
      }
- cout <<"--------------------------------------------------------------------------------" << endl;
+ cout << endl;
+ cout <<"--------------------------------------------------------------------------------";
 
  cout << setw(14) << "Student's Name" << ": " << StudentName << endl;
  cout << setw(14) << left << "Student's ID" << ": " << StudentMatricNo << endl << endl;
 
  cout << setw(18) << left << "Subject's Code" << setw(21) << left << "Name" << setw(14) << left << "Credit Hour" << setw(8) << left << "Grade" << setw(15) << left << "Point Earned" << endl << endl;
 
- outData <<"--------------------------------------------------------------------------------" << endl;
+
 
  outData << setw(14) << "Student's Name" << ": " << StudentName << endl;
  outData << setw(14) << left << "Student's ID" << ": " << StudentMatricNo << endl << endl;
@@ -154,11 +155,12 @@ int main()
 
  for(char i=0; i, i<Loop; i++)
  {
-    cout << setw(19) << left << obs[i].getCode() << setw(20) << left << obs[i].getSubjectName() << setw(5) << right << obs[i].getCreditHour() << setw(12) << right << obs[i].getGradeEarned() << setw(11) << right << setprecision(1) << fixed << obs[i].getPointEarned() << endl;
+    cout << setw(18) << left << obs[i].getCode() << setw(21) << left << obs[i].getSubjectName() << setw(6) << right << obs[i].getCreditHour() << setw(11) << right << obs[i].getGradeEarned() << setw(12) << right << setprecision(1) << fixed << obs[i].getPointEarned() << endl;
 
-  outData << setw(19) << left << obs[i].getCode() << setw(20) << left << obs[i].getSubjectName() << setw(5) << right << obs[i].getCreditHour() << setw(12) << right << obs[i].getGradeEarned() << setw(11) << right << setprecision(1) << fixed << obs[i].getPointEarned() << endl;
+  	outData << setw(18) << left << obs[i].getCode() << setw(21) << left << obs[i].getSubjectName() << setw(6) << right << obs[i].getCreditHour() << setw(11) << right << obs[i].getGradeEarned() << setw(12) << right << setprecision(1) << fixed << obs[i].getPointEarned() << endl;
  }
-
+ cout << endl;
+ outData << endl;
  cout<< "CGPA : " << setprecision(2) << fixed <<cgpa;
  outData<< "CGPA : " << setprecision(2) << fixed <<cgpa;
 
